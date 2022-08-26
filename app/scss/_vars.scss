@@ -1,0 +1,97 @@
+$accent: #fe3e57;
+$main-color: #8d8d8d;
+$title-color: #29282d;
+
+%inter-400 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+%inter-500 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+%inter-700 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+%gentium-400 {
+  font-family: "Gentium Plus", serif;
+  font-weight: 400;
+}
+
+%gentium-700 {
+  font-family: "Gentium Plus", serif;
+  font-weight: 700;
+}
+
+%gentium-i-700 {
+  font-family: "Gentium Plus", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+%flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+%checkbox-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+%pos-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{numbers});
+}
+
+@mixin icon-left($width, $height) {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: $width;
+  height: $height;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin icon-right($width, $height) {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: $width;
+  height: $height;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin background($pos-x, $pos-y) {
+  background-size: cover;
+  background-position: $pos-x $pos-y;
+  background-repeat: no-repeat;
+}
+
+@mixin fit($width, $height) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+}
