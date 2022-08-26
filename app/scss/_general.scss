@@ -1,0 +1,36 @@
+@use "vars" as v;
+
+.logo img,
+.custom-logo img {
+  object-fit: contain;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1760px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+body {
+  @extend %inter-400;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #000;
+}

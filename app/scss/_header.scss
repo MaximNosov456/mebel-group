@@ -1,0 +1,125 @@
+@use "vars" as v;
+
+.header-top {
+  background-color: #edebe9;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90px;
+    padding: 10px 0;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__phone {
+    @extend %inter-700;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: all 0.3s ease-in-out 0.3s;
+    transform: scale(1);
+  }
+
+  &__phone.hide {
+    transform: scale(0);
+  }
+
+  &__phone:hover {
+    color: #777;
+  }
+
+  &__delivery {
+    transition: all 0.3s ease-in-out 0.2s;
+  }
+
+  &__delivery.hide {
+    transform: scale(0);
+  }
+
+  &__delivery,
+  &__search-btn {
+    margin-left: 25px;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__search {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out 0.6s;
+    transform: translateY(-50%);
+    width: 0%;
+  }
+
+  &__input {
+    background-color: transparent;
+    height: 40px;
+    // border-radius: 10px;
+    padding: 0 15px;
+    width: 100%;
+    border: 2px solid #000;
+  }
+
+  &__search.active {
+    z-index: 10;
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+    width: 100%;
+  }
+
+  &__user,
+  &__cart,
+  &__menu-btn,
+  &__menu-close {
+    margin-left: 25px;
+  }
+
+  &__menu-close {
+    display: none;
+  }
+}
+
+.logo {
+  @extend %gentium-i-700;
+  font-size: 32px;
+}
+
+.menu {
+  &__list {
+    display: flex;
+    @extend %inter-700;
+    font-size: 20px;
+  }
+
+  &__list-item + &__list-item {
+    margin-left: 25px;
+  }
+
+  &__list-item {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -32px;
+      width: 100%;
+      border-radius: 3px;
+      height: 0;
+      background-color: #000;
+      transition: all 0.1s;
+    }
+  }
+
+  &__list-item:hover::before {
+    height: 3px;
+  }
+}
