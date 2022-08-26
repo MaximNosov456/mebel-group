@@ -1039,6 +1039,10 @@ body {
   font-weight: 400;
 }
 
+.sales-item__discount,
+.sales-item__descr,
+.sales-item__new-price,
+.sales-item__add,
 .hero-slider__descr,
 .header-top__phone,
 .menu__list {
@@ -1046,6 +1050,7 @@ body {
   font-weight: 700;
 }
 
+.sales__title,
 .hero-slider__title {
   font-family: "Gentium Plus", serif;
   font-weight: 700;
@@ -1310,4 +1315,179 @@ body {
   z-index: 2;
   top: 0;
   left: 0;
+}
+
+@-webkit-keyframes rotate-sale {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-sale {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.sales {
+  padding: 40px 0;
+}
+
+.sales__title {
+  text-align: center;
+  font-size: 55px;
+}
+
+.sales__info {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sales__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.sales-item {
+  padding: 30px;
+  border: 1px solid red;
+  overflow: hidden;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sales-item__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.sales-item__discount {
+  position: relative;
+}
+
+.sales-item__discount span {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin-left: 10px;
+}
+
+.sales-item__discount::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  right: -4px;
+  background-color: #f3e9e2;
+  width: 54px;
+  height: 60px;
+  border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
+  -webkit-animation: rotate-sale 2s linear 0s infinite;
+          animation: rotate-sale 2s linear 0s infinite;
+}
+
+.sales-item__image {
+  margin-bottom: 15px;
+}
+
+.sales-item__descr {
+  font-size: 27px;
+  margin-bottom: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.sales-item__prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.sales-item__old-price {
+  margin-left: 20px;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.sales-item__buy-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  -o-transition: transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  background-color: #fff;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+}
+
+.sales-item__add {
+  background-color: #ccc;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.sales-item__add span {
+  position: relative;
+  padding-right: 35px;
+}
+
+.sales-item__add span::before {
+  content: "";
+  position: absolute;
+  right: 7px;
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../images/mini-cart.svg");
+}
+
+.sales-item__one-click {
+  margin-left: 15px;
+  color: #999;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sales-item:hover .sales-item__buy-block {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
