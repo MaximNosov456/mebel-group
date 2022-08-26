@@ -1,0 +1,76 @@
+@use "vars" as v;
+.hero-slider {
+  .swiper {
+  }
+
+  &__info {
+    position: relative;
+    z-index: 3;
+    padding: 85px 50px 50px 150px;
+  }
+
+  &__title {
+    @extend %gentium-700;
+    font-size: 22px;
+    color: #fff;
+
+    margin-bottom: 25px;
+  }
+
+  &__descr {
+    @extend %inter-700;
+    font-size: 45px;
+    color: #fff;
+    max-width: 375px;
+    margin-bottom: 35px;
+  }
+
+  &__more {
+    border-radius: 25px;
+    padding: 15px 45px;
+    background-color: #fff;
+    transition: all 0.4s;
+    position: relative;
+    top: 0;
+    &:hover {
+      position: relative;
+      top: -5px;
+    }
+  }
+
+  .swiper-hero-slider-pagination {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 10;
+    color: #fff;
+    font-size: 25px;
+  }
+
+  .swiper-hero-slider {
+    min-height: calc(100vh - 90px);
+    height: 1px;
+  }
+
+  .swiper-wrapper {
+    height: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    height: auto;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+
+  &__inner {
+  }
+}

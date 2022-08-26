@@ -13079,19 +13079,16 @@ __webpack_require__.r(__webpack_exports__);
 // accordion();
 // rangeSliderMax();
 
-const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper-first", {
-  // direction: "vertical",
+const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".swiper-hero-slider", {
   loop: true,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-hero-slider-pagination",
+    type: "fraction",
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // scrollbar: {
-  //   el: ".swiper-scrollbar",
-  // },
   slidesPerView: 1,
   spaceBetween: 10,
   modules: [swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination],

@@ -7,19 +7,16 @@ webp(document.body);
 // accordion();
 // rangeSliderMax();
 
-const swiper = new Swiper(".swiper-first", {
-  // direction: "vertical",
+const swiper = new Swiper(".swiper-hero-slider", {
   loop: true,
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-hero-slider-pagination",
+    type: "fraction",
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // scrollbar: {
-  //   el: ".swiper-scrollbar",
-  // },
   slidesPerView: 1,
   spaceBetween: 10,
   modules: [Navigation, Pagination],
