@@ -1,0 +1,51 @@
+@use "vars";
+
+.footer {
+  background-color: #edebe9;
+  padding: 40px 0;
+  &__title {
+    @extend %gentium-700;
+    font-size: 55px;
+    margin-bottom: 35px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 35px;
+  }
+
+  &__item {
+  }
+
+  &__item-title {
+    @extend %inter-700;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  &__item-list li + li {
+    margin-top: 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bottom-copyright {
+  }
+
+  &__bottom-privacyPolicy {
+  }
+
+  &__bottom-termsOfUse {
+  }
+}
+
+.icon {
+  &__payments {
+  }
+}

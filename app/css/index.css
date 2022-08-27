@@ -1039,6 +1039,7 @@ body {
   font-weight: 400;
 }
 
+.footer__item-title,
 .projects-item__title,
 .projects-item__more,
 .sales-item__discount,
@@ -1052,6 +1053,7 @@ body {
   font-weight: 700;
 }
 
+.footer__title,
 .projects__title,
 .sales__title,
 .hero-slider__title {
@@ -1590,4 +1592,45 @@ body {
 .projects-item:hover .projects-item__content {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.footer {
+  background-color: #edebe9;
+  padding: 40px 0;
+}
+
+.footer__title {
+  font-size: 55px;
+  margin-bottom: 35px;
+}
+
+.footer__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.footer__item-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer__item-list li + li {
+  margin-top: 10px;
+}
+
+.footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
