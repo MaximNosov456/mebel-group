@@ -1,0 +1,83 @@
+@use "vars";
+.projects {
+  &__title {
+    @extend %gentium-700;
+    font-size: 55px;
+    margin-bottom: 5px;
+  }
+
+  &__descr {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    transition: all 0.3s;
+    margin-bottom: 40px;
+    &:hover {
+      color: #ccc;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 450px;
+    gap: 15px;
+  }
+}
+
+.projects-item {
+  overflow: hidden;
+  position: relative;
+  &__img {
+    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    height: 25%;
+    padding: 20px 30px 30px 30px;
+    background-color: #fff;
+    transform: translateY(150%);
+    transition: all 0.4s;
+  }
+
+  &__title {
+    @extend %inter-700;
+    font-size: 24px;
+
+    margin-bottom: 25px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__country {
+    margin-right: 35px;
+  }
+
+  &__more {
+    @extend %inter-700;
+    transition: all 0.3s;
+    &:hover {
+      color: #ccc;
+    }
+  }
+}
+
+.projects-item:hover .projects-item__img {
+  transform: scale(1);
+}
+
+.projects-item:hover .projects-item__content {
+  transform: translateY(0);
+}
